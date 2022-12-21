@@ -4,7 +4,7 @@ int main()
 {
     int n;
     cin>>n;
-    //sum of previous two numbers is the third number
+    //sum of previous two is the third 
     int a=0;
     int b=1;
     int c;

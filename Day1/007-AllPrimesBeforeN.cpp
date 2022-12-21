@@ -12,7 +12,7 @@ int main()
         bool flag=0;
         for(int j=2;j<i;j++)
         {
-            if(i%j==0)flag=1;
+            if(i%j==0)flag=1;//non prime
         }
         if(flag==0)cout<<i<<endl;
     }

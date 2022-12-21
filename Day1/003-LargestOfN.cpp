@@ -2,15 +2,14 @@
 using namespace std;
 int main()
 {
-    int n;
-    cin>>n;
-    int largest=INT_MIN;
-    int num;
-    for(int i =0;i<n;i++)
+    int t;
+    cin>>t;
+    int n,ans=INT_MIN;
+    for(int i=0;i<t;i++)
     {
-        cin>>num;
-        if(num>largest)largest=num;
+        cin>>n;
+        if(ans<n)ans=n;
     }
-    cout<<endl<<largest;
+    cout<<ans;
     return 0;
 }

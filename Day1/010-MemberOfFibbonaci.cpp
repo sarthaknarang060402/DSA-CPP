@@ -11,13 +11,13 @@ int main()
     {
         if(a==n)
         {
-            cout<<"1";
+            cout<<true;
             return 0;
         }
         c=a+b;
         a=b;
         b=c;
     }
-    cout<<"0";
+    cout<<false;
     return 0;
 }

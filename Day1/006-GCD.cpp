@@ -2,18 +2,18 @@
 using namespace std;
 int main()
 {
-    int a,b;
-    cin>>a>>b;
+    int m,n;
+    cin>>m>>n;
     while(1)
     {
-        if(a%b==0) {
-            cout<<b;
+        if(m%n==0) {
+            cout<<n;
             break;
         }
         else {
-            int temp=a%b;
-            a=b;
-            b=temp;
+            int temp=m%n;
+            m=n;
+            n=temp;
         }
     }
     return 0;
