@@ -12,12 +12,12 @@ int main()
 {
     int n;
     cin>>n;
+    char letter='A';
     for(int i=0;i<n;i++)
     {
         for(int j=0;j<n;j++)
         {
-            char letter='A'+j;
-            cout<<letter;
+            cout<<char(letter+j);//typecast
         }
         cout<<endl;
     }

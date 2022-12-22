@@ -11,17 +11,14 @@ int main()
 {
     int n;
     cin>>n;
-    int i=1;
-    while(i<=n)
+    for(int i=0;i<n;i++)
     {
-        int j=1;
-        while(j<=i)
+        int num=1;
+        for(int j=0;j<i+1;j++)
         {
-            cout<<j;
-            j++;
+            cout<<num++;
         }
         cout<<endl;
-        i++;
     }
     return 0;
 }

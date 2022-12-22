@@ -12,10 +12,10 @@ int main()
     cin>>n;
     for(int i=0;i<n;i++)
     {
-        int val=i+1;
+        int start=i+1;
         for(int j=0;j<i+1;j++)
         {
-            cout<<val--;
+            cout<<start--;
         }
         cout<<endl;
     }
