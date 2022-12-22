@@ -8,8 +8,8 @@ int main()
 {
     char input;
     cin>>input;
-    if(input>=65&&input<=90)cout<<"1";
-    else if(input>=97&&input<=122)cout<<"0";
+    if(input>='A'&&input<='Z')cout<<"1";
+    else if(input>='a'&&input<='z')cout<<"0";
     else cout<<"-1";
     return 0;
 }
