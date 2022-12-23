@@ -13,10 +13,10 @@ int main()
     cin>>n;
     for(int i=0;i<n;i++)
     {
-        char letter='A'+n-i-1;
+        char start = 'A'+n-i-1;
         for(int j=0;j<i+1;j++)
         {
-            cout<<letter++;
+            cout<<start++;
         }
         cout<<endl;
     }

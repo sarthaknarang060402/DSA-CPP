@@ -3,30 +3,29 @@
 // Input format :
 
 // Line 1 : Total number of elements (n)
-
 // Line 2 : N elements (separated by space)
-#include<bits/stdc++.h>
+#include <bits/stdc++.h>
 using namespace std;
 int main()
 {
     int n;
-    cin>>n;
-    int lar=INT_MIN;
-    int slar=INT_MIN;
+    cin >> n;
+    int lar = INT_MIN;
+    int slar = INT_MIN;
     int num;
-    for(int i=0;i<n;i++)
+    for (int i = 0; i < n; i++)
     {
-        cin>>num;
-        if(num>slar&&num<lar)
+        cin >> num;
+        if (num > slar && num < lar)
         {
-            slar=num;
+            slar = num;
         }
-        if(num>lar)
+        else if (num > lar)
         {
-            slar=lar;
-            lar=num;
+            slar = lar;
+            lar = num;
         }
     }
-    cout<<slar;
+    cout << slar;
     return 0;
 }

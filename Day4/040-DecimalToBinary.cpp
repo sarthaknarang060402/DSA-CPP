@@ -1,19 +1,18 @@
 // Given a decimal number (integer N), convert it into binary and print.
 // The binary number should be in the form of an integer.
 
-#include<bits/stdc++.h>
+#include <bits/stdc++.h>
 using namespace std;
 int main()
 {
     int n;
-    cin>>n;
-    long bin=0,pv=1;
-    for(int i=0;n>0;i++)
+    cin >> n;
+    int ans = 0; // 12
+    for (int i = 0; n > 0; i++)
     {
-        bin+=pv*(n%2);
-        n/=2;
-        pv*=10;
+        ans += (n % 2) * pow(10, i);
+        n /= 2;
     }
-    cout<<bin;
+    cout << ans;
     return 0;
 }

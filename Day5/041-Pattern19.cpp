@@ -4,30 +4,31 @@
 //   212
 //  32123
 // 4321234
-#include<bits/stdc++.h>
+#include <bits/stdc++.h>
 using namespace std;
 int main()
 {
     int n;
-    cin>>n;
-    
-    for(int i=0;i<n;i++)
+    cin >> n;
+
+    for (int i = 0; i < n; i++)
     {
-        //spaces
-        for(int j=0;j<n-i-1;j++)
+        for (int j = 0; j < n - i - 1; j++)
         {
-            cout<<" ";
+            cout << " ";
+        }
+        int start = i + 1;
+        for (int j = 0; j < i + 1; j++)
+        {
+            cout << start--;
         }
 
-        for(int j=i+1;j>0;j--)
+        start = 2;
+        for (int j = 0; j < i; j++)
         {
-            cout<<j;
+            cout << start++;
         }
-        for(int j=0;j<i;j++)
-        {
-            cout<<j+2;
-        }
-        cout<<endl;
+        cout << endl;
     }
     return 0;
 }

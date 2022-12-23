@@ -12,10 +12,15 @@ int main()
     cin>>n;
     for(int i=0;i<n;i++)
     {
-        //spaces
-        for(int j=0;j<n-i-1;j++)cout<<" ";
-        //number
-        for(int j=0;j<i+1;j++)cout<<j+1;
+        int start =1;
+        for(int j=0;j<n-i-1;j++)
+        {
+            cout<<" ";
+        }
+        for(int j=0;j<i+1;j++)
+        {
+            cout<<start++;
+        }
         cout<<endl;
     }
     return 0;

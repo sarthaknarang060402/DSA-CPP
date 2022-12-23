@@ -10,15 +10,16 @@ int main()
     char a;
     int i;
     a=cin.get();
-    int dcount=0,scount=0,ccount=0;
+    int dcount=0,ocount=0,ccount=0,tcount=0;
     for(i=0;a!='$';i++)
     {
-        if(a>=48&&a<=57)dcount++;
-        else if(a==' '||a=='	'||a=='\n')scount++;
-        else ccount++;
+        if(a>='0'&&a<='9')dcount++;
+        else if(a==' '||a=='	'||a=='\n')tcount++;
+        else if (a>='a'&&a<='z')ccount++;
+        else ocount++;
         a=cin.get();
     }
-    cout<<ccount<<' '<<dcount<<' '<<scount<<endl;
+    cout<<ccount<<' '<<dcount<<' '<<tcount<<' '<<ocount<<endl;
 }
 
 

@@ -13,22 +13,23 @@ int main()
     for(int i=0;i<n;i++)
     {
         //spaces
-        for(int j=0;j<n-i-1;j++)
+        for(int j=0;j<n-i;j++)
         {
             cout<<" ";
         }
 
-        //number_1
-        int val;
-        for(int j=0;j<=i;j++)
+        //half 1
+        int start=i+1;
+        for(int j=0;j<i+1;j++)
         {
-            cout<<i+j+1;
-            val=i+j+1;
+            cout<<start++;
         }
-        //number_2
+
+        //half2
+        start-=2;
         for(int j=0;j<i;j++)
         {
-            cout<<--val;
+            cout<<start--;
         }
         cout<<endl;
     }

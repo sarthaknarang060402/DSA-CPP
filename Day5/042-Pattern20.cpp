@@ -8,35 +8,30 @@
 // 123****321
 // 12******21
 // 1********1
-#include<bits/stdc++.h>
+#include <bits/stdc++.h>
 using namespace std;
 int main()
 {
     int n;
-    cin>>n;
-    for(int i=0;i<n;i++)
+    cin >> n;
+    for (int i = 0; i < n; i++)
     {
-        for(int j=0;j<n-i;j++)
+        int start = 1;
+        for (int j = 0; j < n - i; j++)
         {
-            cout<<j+1;
+            cout << start++;
         }
-
-        for(int j=0;j<i;j++)
+        for (int j = 0; j < 2 * i; j++)
         {
-            cout<<"*";
+            cout << "*";
         }
-
-        for(int j=0;j<i;j++)
+        start--;
+        for (int j = 0; j < n - i; j++)
         {
-            cout<<"*";
+            cout << start--;
         }
-        for(int j=n-i;j>0;j--)
-        {
-            cout<<j;
-        }
-
-        cout<<endl;
+        cout << endl;
     }
-    
+
     return 0;
 }

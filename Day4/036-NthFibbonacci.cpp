@@ -3,7 +3,7 @@ using namespace std;
 
 // int main()
 // {
-//     int N,a=0,b=1,c;
+//     unsigned long long int N,a=0,b=1,c;
 //     cin>>N;
 //     for(int i=0;i<N;i++)
 //     {

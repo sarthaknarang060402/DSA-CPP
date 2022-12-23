@@ -6,14 +6,14 @@
 using namespace std;
 int main()
 {
-    int n;
-    cin>>n;
+    int num;
+    cin>>num;
     int rev=0;
-    for(;n>0;)
+    for(;num>0;)
     {
         rev*=10;
-        rev+=n%10;
-        n/=10;  
+        rev+=num%10;
+        num/=10;  
     }
     cout<<rev;
     return 0;
