@@ -8,7 +8,7 @@ using namespace std;
 int binarySearch(int *input, int n, int val)
 {
     int start = 0, end = n - 1, mid;
-    for (; start <= end;)
+    while (start <= end)
     {
         mid = (start + end) / 2;
         if (input[mid] > val)

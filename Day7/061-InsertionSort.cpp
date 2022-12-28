@@ -8,7 +8,7 @@ void insertionSort(int *input, int size)
     for (int i = 1; i < size; i++)
     {
         int current = input[i];
-        int j;
+        int j; // sorted array index
         for (j = i - 1; j >= 0; j--)
         {
             if (current < input[j]) // shift jth to right and current to left side of jth element
