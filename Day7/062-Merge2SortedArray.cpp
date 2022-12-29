@@ -6,31 +6,33 @@ using namespace std;
 void merge(int *arr1, int size1, int *arr2, int size2, int *ans)
 {
     int i, j, k;
-    for (i = 0, j = 0, k = 0; i < size1 && j < size2; k++)
+
+    for (i = 0, j = 0, k = 0; i != size1 && j != size2; k++)
     {
-        if (arr1[i] < arr2[j])
+        if (arr1[i] <= arr2[j])
         {
             ans[k] = arr1[i];
             i++;
-            continue;
         }
         else
-            ans[k] = arr2[j];
-        j++;
-    }
-    // remaining elements
-    if (i == size1) // arr1 complete and arr2 elements remain
-    {
-        for (; j != size2; j++, k++)
         {
             ans[k] = arr2[j];
+            j++;
         }
     }
-    if (j == size2) // arr2 complete and arr1 elements remain
+
+    if (i == size1)
     {
-        for (; i != size1; i++, k++)
+        for (; j != size2; j++)
         {
-            ans[k] = arr1[i];
+            ans[k++] = arr2[j];
+        }
+    }
+    else if (j == size2)
+    {
+        for (; i != size1; i++)
+        {
+            ans[k++] = arr1[i];
         }
     }
 }
