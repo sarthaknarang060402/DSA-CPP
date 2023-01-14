@@ -2,11 +2,11 @@
 #include <bits/stdc++.h>
 #include <iostream>
 using namespace std;
-void reverse(int *input, int start, int end)
+void reverse(int *arr, int start, int end)
 {
-    for (int i = start; i <= (start + end) / 2; i++)
+    for (; start < end;)
     {
-        swap(input[i], input[end - i + start]);
+        swap(arr[start++], arr[end--]);
     }
 }
 int main()

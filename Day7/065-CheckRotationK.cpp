@@ -4,25 +4,20 @@
 #include <iostream>
 using namespace std;
 
-int arrayRotateCheck(int *input, int size)
+#include <bits/stdc++.h>
+int arrayRotateCheck(int *input, int n)
 {
-    if (size == 0)
-        return 0;
-    int length = 1;
-    for (int i = 0; i < size; i++)
+    int min = INT_MAX;
+    int idx = 0;
+    for (int i = 0; i < n; i++)
     {
-        if (input[i] < input[i + 1])
+        if (input[i] < min)
         {
-            length++;
+            min = input[i];
+            idx = i;
         }
-        else
-        {
-            return length;
-        }
-        if (length == size)
-            return 0;
     }
-    return length;
+    return idx;
 }
 
 int main()

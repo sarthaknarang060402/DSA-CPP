@@ -5,9 +5,11 @@
 #include <iostream>
 using namespace std;
 #include <bits/stdc++.h>
+#include <bits/stdc++.h>
 int findSecondLargest(int *arr, int n)
 {
-    int lar = INT_MIN, slar = INT_MIN;
+    int lar = INT_MIN;
+    int slar = lar;
     for (int i = 0; i < n; i++)
     {
         if (arr[i] > lar)
@@ -15,13 +17,11 @@ int findSecondLargest(int *arr, int n)
             slar = lar;
             lar = arr[i];
         }
-        else if (arr[i] < lar && arr[i] > slar)
+        else if (arr[i] > slar && arr[i] != lar)
         {
             slar = arr[i];
         }
     }
-    if (lar == slar)
-        return INT_MIN;
     return slar;
 }
 
