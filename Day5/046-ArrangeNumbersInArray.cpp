@@ -8,35 +8,21 @@ using namespace std;
 void arrange(int *arr, int n)
 {
     int val = 1;
+    int k;
     if (n % 2 == 0)
-    {
-        int i = 0;
-        for (; i < n / 2; i++)
-        {
-            arr[i] = val;
-            val += 2;
-        }
-        val--;
-        for (int j = 0; j < n / 2; j++)
-        {
-            arr[i + j] = val;
-            val -= 2;
-        }
-    }
+        k = 0;
     else
+        k = 1;
+    for (int i = 0; i < n / 2 + k; i++)
     {
-        int i = 0;
-        for (; i < (n / 2) + 1; i++)
-        {
-            arr[i] = val;
-            val += 2;
-        }
-        val -= 3;
-        for (int j = 0; j < n / 2; j++)
-        {
-            arr[i + j] = val;
-            val -= 2;
-        }
+        arr[i] = val;
+        val += 2;
+    }
+    val -= 1 + 2 * k;
+    for (int i = (n / 2) + k; i < n; i++)
+    {
+        arr[i] = val;
+        val -= 2;
     }
 }
 
