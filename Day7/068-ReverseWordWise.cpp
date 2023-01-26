@@ -1,12 +1,5 @@
 #include <iostream>
-int size(char input[])
-{
-    int s;
-    for (s = 0; input[s] != '\0'; s++)
-    {
-    }
-    return s;
-}
+#include <cstring>
 void reverse(char input[], int i, int j)
 {
     for (; i < j; i++, j--)
@@ -19,7 +12,7 @@ void reverse(char input[], int i, int j)
 
 void reverseStringWordWise(char input[])
 {
-    int length = size(input);
+    int length = strlen(input);
     // reverse full string
     reverse(input, 0, length - 1);
     // reversing words
